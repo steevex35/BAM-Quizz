@@ -1,0 +1,66 @@
+section#game{
+
+  height: 100vh;
+
+
+  p{
+    color:#1E5BC6;
+    font-size: 16pt;
+  }
+
+  .titre_Red{
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 100pt;
+  }
+
+  .titre{
+    text-align: center;
+    font-weight: bold;
+    color: #1E5BC6;
+    font-size: 70pt;
+  }
+
+  .question-game{
+    text-align: center;
+    font-weight: 200;
+    color: #1E5BC6;
+    font-size: 80pt;
+  }
+
+  .count-down{
+    font-family: pixel-lcd;
+    color: #1E5BC6;
+    font-size: 100pt;
+    letter-spacing: 21px;
+  }
+
+  .margin20{
+    margin-bottom: 20px;
+  }
+
+  .submit_btn{
+    margin-top: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh; 
+    padding-top: 2vh; 
+    padding-bottom: 2vh; 
+    font-weight: bold;
+    font-size: 22pt;
+    color: white;
+    background: #0970E6 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  .question{
+    border: 1px solid var(--unnamed-color-1e5bc6);
+    border: 1px solid #1E5BC6;
+    width: 500px;
+    padding: 10px;
+    margin: 3vh;
+    border-radius: 20px;
+  }
+
+
+}

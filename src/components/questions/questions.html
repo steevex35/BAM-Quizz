@@ -1,0 +1,23 @@
+<template>
+  <require from="./questions.scss"></require>
+  <require from="../../components/header/header"></require>
+  <section id="questions" class="column"> 
+    <header></header>
+    <div class="column" style="margin-right:10vh;margin-left:10vh;">
+      <div class="container" >
+        <div class="titre" style="margin-bottom: 2vh;"t="title_questions">
+        </div>
+        <div class="row center">
+          <div repeat.for="question of listQuestions">
+            <div class="question" click.delegate="selectQuestion(question)">
+              <p>${question.description}</p>
+            </div>
+         
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</template>

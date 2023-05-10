@@ -1,0 +1,86 @@
+section#form{
+
+  height: 100vh;
+  p{
+    color:#1E5BC6;
+    font-size: 16pt;
+    font-weight: 100;
+  }
+
+  .titre{
+    text-align: center;
+    color: #1E5BC6;
+    font-size: 20pt;
+  }
+
+  .margin20{
+    margin-bottom: 20px;
+  }
+
+  .submit_btn{
+    margin-top: 6vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    padding-left: 5vh;
+    padding-right: 5vh; 
+    padding-top: 2vh; 
+    padding-bottom: 2vh; 
+    font-weight: bold;
+    font-size: 18pt;
+    color: white;
+    background: #0970E6 0% 0% no-repeat padding-box;
+    width: 250px;
+    border: #0970E6;
+  }
+
+  input[type=checkbox] {
+    transform: scale(1.0);
+    margin-left: 50px;
+    zoom: 3.5;
+}
+input[type=radio] {
+  transform: scale(1.0);
+  margin-left: 30px;
+  zoom: 3.5;
+}
+
+input[type=text] {
+  border: 1px solid var(--unnamed-color-1e5bc6);
+  border: 1px solid #1E5BC6;
+  color:#1E5BC6;
+  font-size: 16pt ;
+  
+}
+label{
+  color:#1E5BC6 ;
+  font-size: 16pt;
+  font-weight: 100;
+}
+span{
+  color:#1E5BC6 ;
+  font-size: 16pt;
+  font-weight: 100;
+}
+
+.wrapper {
+  list-style-type: none;
+  border-radius: 3px;
+}
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: .2em;
+  margin-top: 10px;
+}
+.form-row > label {
+  padding: .5em 1em .5em 0;
+  flex: 2;
+}
+.form-row > input {
+  flex: 8;
+}
+.form-row > input {
+  padding: .5em;
+}
+
+}

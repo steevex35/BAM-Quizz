@@ -1,0 +1,133 @@
+<template>
+  <require from="./reglement.scss"></require>
+  <require from="../../components/header/header"></require>
+  <section id="reglement" class="column"> 
+    <!--header></header>
+    <div class="column">
+      <div class="">
+        <div>
+          <p class="titre" style="margin-bottom: 5vh;" t="title_reglement"></p>
+          <span style="color:#EE2B30!important;">*</span>
+        </div>
+        <p style="margin-left:30vh;margin-right:20vh;margin-bottom: 10px;font-weight: 200; font-size: 16pt;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+      </div>
+      <div class="row center">
+        <button  class="submit_btn" click.delegate="router.navigateToRoute('form')"t="ok" ></button>
+      </div>
+    </div>
+    </div>
+  </section-->
+  <ux-dialog>
+    <ux-dialog-header>
+      <div class="row" style="justify-content:flex-end;" click.trigger="dialogController.cancel()">
+        <img src="../../assets/img/close-icon.png">
+      </div>
+       
+    </ux-dialog-header>
+    <ux-dialog-body style="margin-left:20px ;">
+      <p class="titre" style="margin-bottom: 5vh;" t="title_reglement"></p>
+      
+      <div style="font-weight: 100;">
+        <h4 t="chapter_1"></h4>
+        <p t="chapter_1_p1"></p>
+      
+        <p t="chapter_1_p2"></p>
+        
+        <p t="chapter_1_p3"></p>
+        <br>
+
+        <h4 t="chapter_2"></h4>
+        <p t="chapter_2_p1"></p>
+        
+        <p t="chapter_2_p2"></p>
+        
+        <p t="chapter_2_p3"></p>
+        
+        <p t="chapter_2_p4"></p>
+        
+        <br>
+        <h4 t="chapter_3"></h4>
+        <p t="chapter_3_p1"></p>
+        
+        <p t="chapter_3_p2"></p>
+      
+        <p t="chapter_3_p3"></p>
+        
+        <p t="chapter_3_p3_1"></p>
+        
+        <p t="chapter_3_p4"></p>
+      
+        <p t="chapter_3_p5"></p>
+        
+        <br>
+        <h4 t="chapter_4"></h4>
+        <p t="chapter_4_p1"></p>
+
+        <br>
+        <h4 t="chapter_5"></h4>
+        <p t="chapter_5_p1"></p>
+        <ul style="margin-left:50px ;">
+          <li t="chapter_5_p1_1"></li>
+          <li t="chapter_5_p1_2"></li>
+        </ul>
+        <p t="chapter_5_p2"></p>
+        <p t="chapter_5_p3"></p>
+        <ul style="margin-left:50px ;">
+          <li t="chapter_5_p3_1"></li>
+          <li t="chapter_5_p3_2"></li>
+        </ul>
+        <p t="chapter_5_p4"></p>
+        <p t="chapter_5_p5"></p>
+        <p t="chapter_5_p6"></p>
+        <p t="chapter_5_p7"></p>
+        <br>
+        <h4 t="chapter_6"></h4>
+        <p t="chapter_6_p1"></p>
+        <p t="chapter_6_p2"></p>
+        <p t="chapter_6_p3"></p>
+        <p t="chapter_6_p4"></p>
+        <p t="chapter_6_p5"></p>
+        <p t="chapter_6_p6"></p>
+        <p t="chapter_6_p7"></p>
+        <p t="chapter_6_p8"></p>
+        <ul style="margin-left:50px ;">
+          <li t="chapter_6_p8_1"></li>
+          <li t="chapter_6_p8_2"></li>
+          <li t="chapter_6_p8_3"></li>
+          <li t="chapter_6_p8_4"></li>
+          <li t="chapter_6_p8_5"></li>
+          <li t="chapter_6_p8_6"></li>
+        </ul>
+
+        <br>
+        <h4 t="chapter_7"></h4>
+        <p t="chapter_7_p1"></p>
+        <p t="chapter_7_p2"></p>
+        <p t="chapter_7_p3"></p>
+        <p t="chapter_7_p4"></p>
+        <p t="chapter_7_p5"></p>
+        <p t="chapter_7_p6"></p>
+        <ul style="margin-left:50px;">
+          <li t="chapter_7_p6_1"></li>
+          <li t="chapter_7_p6_2"></li>
+        </ul>
+        <p t="chapter_7_p7"></p>
+        <p t="chapter_7_p8"></p>
+        <p t="chapter_7_p9"></p>
+
+        <br>
+        <h4 t="chapter_8"></h4>
+        <p t="chapter_8_p1"></p>
+      </div>
+      <div class="row center" style="margin-bottom:5vh; margin-top:2vh">
+        <button  class="submit_btn" click.trigger="dialogController.cancel()" t="title_reglemen_button" ></button>
+      </div>
+    </ux-dialog-body>
+  </ux-dialog>
+
+
+</section>
+</template>

@@ -1,0 +1,33 @@
+<template>
+  <require from="./question_base.scss"></require>
+  <require from="../../components/header/header"></require>
+  <section id="question_base" class="column"> 
+    <header></header>
+    <div class="column" style="margin-right:20vh;margin-left:20vh;">
+
+      <div class="container" show.bind="!currentGamer">
+        <p class="titre" style="margin-top: 20vh;" t="question_base">
+         
+        
+        </p>
+        <!--iframe width="100%" height="1000px" src="https://www.youtube.com/embed/tnJUmDxn1wU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
+      </div>
+      <div class="container" show.bind="currentGamer">
+        <div class="center" style="margin-bottom: 5vh;">
+          <p class="titre" style="margin-bottom: 2vh;" t="title_game_buzz"></p>
+          <p class="question-game">${currentGamer.question_base}</p>
+        </div>
+        <div class="center" style="margin-top:15vh;">
+          <p class="count-down">${countdown}</p>
+        </div>
+        <!--div class="center">
+          <button class="submit_btn" click.delegate="stopCountdown()"> BUZZER</button>
+        </div-->
+        <div class="center" style="margin-top: 10vh;">
+          <p style="font-size:30pt;font-weight:100">* toutes les données ont été relevées à date du 14/11/2022</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</template>

@@ -1,0 +1,20 @@
+<template>
+  <require from="./home.scss"></require>
+  <require from="../../components/header/header"></require>
+  <section id="home" class="column"> 
+    <header></header>
+    <div class="column">
+      <div class="container">
+        <p class="center" style="font-size:38pt; margin-top: 10vh;">
+          Choisissez votre langue!<br>
+          Kies uw taal!
+        </p>
+        <div class="row center" style="margin-left:100px;margin-right:100px">
+          <button  class="submit_btn" click.delegate="setLngAndRoute('fr')">Français</button>
+          <button  class="submit_btn" click.delegate="setLngAndRoute('nl')">Nederlands</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</template>
