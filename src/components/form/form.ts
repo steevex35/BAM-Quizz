@@ -20,12 +20,10 @@ export class Form{
   private currentUser: User;
   private userLng;
 
-  
 
   constructor(private router:Router,private i18n:I18N,private dialogService:DialogService){
     this.userLng =  this.i18n.getLocale();
     console.log(this.userLng)
-
     this.dialogService = dialogService
     
   }
@@ -35,8 +33,6 @@ export class Form{
       console.log(response.output);
     });
   }
-
-
 
   validate(){
     if(this.isEmpty(this.prenom) || this.isEmpty(this.nom) || this.isEmpty(this.sex) || this.isEmpty(this.entreprise) || this.isEmpty(this.reglement)){
