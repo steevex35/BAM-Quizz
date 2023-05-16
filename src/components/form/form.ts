@@ -4,6 +4,7 @@ import { User } from 'user';
 import {I18N} from 'aurelia-i18n';
 import { DialogService } from 'aurelia-dialog';
 import { Reglement } from 'components/reglement/reglement';
+import { Peer } from "peerjs";
 @autoinject
 
 export class Form{
@@ -20,10 +21,12 @@ export class Form{
   private currentUser: User;
   private userLng;
 
+  private peer = new Peer("sender",{host:"localhost",port:9000});
+
 
   constructor(private router:Router,private i18n:I18N,private dialogService:DialogService){
-    this.userLng =  this.i18n.getLocale();
-    console.log(this.userLng)
+    this.userLng = this.i18n.getLocale();
+    this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
     this.dialogService = dialogService
     
   }
@@ -46,7 +49,8 @@ export class Form{
       this.setUser();
       this.errorMessage=null;
       console.log(this.currentUser)
-      this.router.navigateToRoute('questions')
+      this.toGamePage()
+      this.router.navigateToRoute('thanks_ipad')
     }
   }
 
@@ -73,14 +77,8 @@ export class Form{
       email: this.email,
       reglement: this.reglement,
       newsletter: this.newsletter,
-      question:"",
-      question_awnser:0,
       response:0,
-      question_base:"",
-      question_base_max:0,
-      response_question_base:0,
-      question_base_awnser:0,
-      lng: this.userLng
+      lng: window.localStorage.getItem('lng_sesison')
     }
     //set User in the Local Storage
     this.setUserInLocalStorage(this.currentUser);
@@ -107,10 +105,21 @@ export class Form{
       return true
   }
 
-
   retour(){
     this.router.navigateToRoute('home')
     window.location.reload()
+  }
+
+  toGamePage(){
+      /**
+     * Todo: send data to PeerJs and Start Game
+     */
+       const conn = this.peer.connect("receiver");
+       conn.on("open", () => {
+         conn.send(this.currentUser);
+       });
+    //console.log("send signal via peerJS to game page")
+    
   }
 
   

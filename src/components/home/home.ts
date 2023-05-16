@@ -10,7 +10,7 @@ export class Home{
 
   setLngAndRoute(lng:string){
     this.i18n.setLocale(lng);
-    //console.log(this.i18n.getLocale())
+    window.localStorage.setItem("lng_sesison", lng);
     this.router.navigateToRoute('form')
   }
   

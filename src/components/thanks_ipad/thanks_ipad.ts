@@ -1,4 +1,5 @@
 import { autoinject } from 'aurelia-framework';
+import { I18N } from 'aurelia-i18n';
 import { Router } from 'aurelia-router';
 import internal from 'stream';
 @autoinject
@@ -7,9 +8,10 @@ import internal from 'stream';
 export class ThanksIpad{
  
   private interval:any
-  private countdown= 10
+  private countdown= 3
 
-  constructor(private router:Router){
+  constructor(private router:Router,private i18n:I18N){
+    this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
    this.backTogamePage()
   }
 

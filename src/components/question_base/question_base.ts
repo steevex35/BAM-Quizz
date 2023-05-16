@@ -62,24 +62,24 @@ export class QuestionBase{
   startCountUp(){
     const time= 15;
     const fps = 99;
-    const interval = Math.floor((this.currentGamer.question_base_max/time)/fps)
+    const interval = Math.floor((1000/time)/fps)
     
     this.interval=setInterval(()=>{
       console.log(this.buzzer)
 
       if(!this.buzzer){
-        if(this.countdown == this.currentGamer.question_base_max){
+        if(this.countdown == 1000){
           this.saveGamer()
           console.log("End of the game 1")
           console.log(this.countdown);
           clearInterval(this.interval);
           this.countTapeBuzz =0;
         }
-        if(this.countdown < this.currentGamer.question_base_max){
+        if(this.countdown < 1000){
           this.countdown +=interval;
         }
-        if(this.countdown > this.currentGamer.question_base_max){
-          this.countdown = this.currentGamer.question_base_max
+        if(this.countdown > 1000){
+          this.countdown = 1000
           this.saveGamer()
           clearInterval(this.interval);
           console.log("End of the game 2");
@@ -100,7 +100,7 @@ export class QuestionBase{
    * Save gamer info
    */
   async saveGamer(){
-    this.currentGamer.response_question_base = this.countdown
+   // this.currentGamer.response_question_base = this.countdown
     localStorage.setItem('currentGamer', JSON.stringify(this.currentGamer));
     //post 
     this.postGamer()

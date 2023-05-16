@@ -42,13 +42,6 @@ export class Questions{
   }
 
   selectQuestion(question){
-    this.getCurrentUser()
-    this.currentUser.question = question.description;
-    this.currentUser.question_awnser = question.answer;
-    this.currentUser.max = question.max;
-    this.currentUser.question_base = this.q6.description;
-    this.currentUser.question_base_max = this.q6.max;
-    this.currentUser.question_base_awnser = this.q6.answer;
     console.log(this.currentUser)
 
     this.toGamePage()

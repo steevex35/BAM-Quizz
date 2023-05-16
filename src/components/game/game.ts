@@ -193,16 +193,27 @@ export class Game{
     clearInterval(this.interval);
   }
 
-  /** On keyboard pressed */
+  /** Buzze 
+   * Bleu 1
+   * Rouge 2
+   * Jaune 3
+   * Vert 4
+  */
   handleKeyInput = (event) => {
-    if(event.key == "y"){
-      this.tapeBuzzer()
+    if(event.key == 1){
+      //this.tapeBuzzer()
+      console.log("Buzzer Bleu pushed")
     }
-    if((event.key == "y")&&(this.countTapeBuzz==1))
-      this.startGame()
-    if((event.key == "y")&&(this.countTapeBuzz==2)){
-      this.stopCountdown()
-      this.countTapeBuzz=0
+    if((event.key == 2))
+      //this.startGame()
+      console.log("Buzzer Rouge pushed")
+    if((event.key == 3)){
+      //this.stopCountdown()
+      //this.countTapeBuzz=0
+      console.log("Buzzer Jaune pushed")
+    }
+    if((event.key == 4)){
+      console.log("Buzzer Vert pushed")
     }
      
   }

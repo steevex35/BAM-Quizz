@@ -7,16 +7,18 @@ export class User{
   entreprise:string;
   email:string;
   reglement:boolean;
-  newsletter:boolean;
-  question:string;
-  question_awnser:number;
-  question_base_awnser:number;
-  question_base:string;
-  question_base_max:number;
+  newsletter:boolean=false;
+  question1?:string;
+  question_awnser1?;
+  question2?;
+  question_awnser2?;
+  question3?;
+  question_awnser3?;
+  question4?;
+  question_awnser4?;
   max?=0;
   lng?;
   response:number;
-  response_question_base:number;
 }
 
 

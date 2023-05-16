@@ -18,18 +18,13 @@ section#form{
   }
 
   .submit_btn{
-    margin-top: 6vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    padding-left: 5vh;
-    padding-right: 5vh; 
-    padding-top: 2vh; 
-    padding-bottom: 2vh; 
+    padding: 2rem;
+    margin: 2rem;
     font-weight: bold;
     font-size: 18pt;
     color: white;
     background: #0970E6 0% 0% no-repeat padding-box;
-    width: 250px;
+    width: 350px;
     border: #0970E6;
   }
 
@@ -37,11 +32,14 @@ section#form{
     transform: scale(1.0);
     margin-left: 50px;
     zoom: 3.5;
+   
 }
 input[type=radio] {
   transform: scale(1.0);
   margin-left: 30px;
   zoom: 3.5;
+  border: 1px solid #1E5BC6;
+  
 }
 
 input[type=text] {
@@ -51,6 +49,7 @@ input[type=text] {
   font-size: 16pt ;
   
 }
+
 label{
   color:#1E5BC6 ;
   font-size: 16pt;
@@ -58,7 +57,7 @@ label{
 }
 span{
   color:#1E5BC6 ;
-  font-size: 16pt;
+  font-size: 26pt!important;
   font-weight: 100;
 }
 
