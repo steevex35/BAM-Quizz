@@ -6,13 +6,28 @@
     <div class="column" style="margin-right:20vh;margin-left:20vh;">
 
       <div class="container" show.bind="!currentGamer">
+        <div class="center">
+         
+          <div class="center parent" style="margin-top: 20vh">
+         
+            <p class.bind="isAnime1 ? 'show_message1' : ''">
+             <span style="font-size: 40pt;">Jouez et tentez de gagner 2 places  <br> pour un Dinner in the Sky  <br>
+            </span>
+             <span style="font-size: 20pt;">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</span>
+            
+            </p>
+            <p class.bind="isAnime2 ? 'show_message1' : ''">
+              <span style="font-size: 40pt;">Speel mee en maak kans op 2 tickets voor Dinner in the Sky <br></span>
+              <span style="font-size: 20pt;">of 1 van de 10 Carrefour cadeaukaarten van 25 EUR</span>
+            </p>
+       
+         
+        </div>
+    
+      </div>
 
-        <p class="titre_Red" style="margin-top: 20vh">Win red devils tickets and other prices !</p>
-        <p  class= "center" style="margin-top: 20px;font-size: 60pt;">
-          Registreer je op de tablet om deel te nemen <br>
-          Enregistrez-vous sur la tablette pour participer
-        
-        </p>
+       
+       
         <!--iframe width="100%" height="1000px" src="https://www.youtube.com/embed/tnJUmDxn1wU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
       </div>
       <div class="container" show.bind="currentGamer">

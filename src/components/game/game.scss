@@ -1,6 +1,43 @@
 section#game{
 
   height: 100vh;
+  $myheight: 15rem;
+  .parent{
+    height: $myheight;
+    p{
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .show_message1{
+    animation: fadein1 5s ;
+    animation-delay: 0s ;
+    opacity: 0;
+    height:0;
+    overflow: hidden;
+    transition: height;
+    filter: blur(10px);
+  
+  }
+
+  @keyframes fadein1 {
+    1%{
+      height: $myheight;
+    }
+    100%{
+      filter: blur(10px);
+      opacity: 0;
+      height: 0px;
+    }
+    
+    20%,90%{
+      filter: blur(0px);
+      opacity: 1;
+      height:$myheight;
+    }
+   
+  }
 
 
   p{

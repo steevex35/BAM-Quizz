@@ -22,9 +22,15 @@ export class Game{
 
   private peer = new Peer("receiver",{host:"localhost",port:9000});
 
-  private countdown:number;
+  private countdown=0;
   private interval:any;
   private countTapeBuzz: number;
+
+private isAnime1 = false
+private isAnime2 = false
+private isAnime3 = false
+private isAnime4 = false
+
 
   constructor(private router:Router, private i18n:I18N){
     this.countTapeBuzz =0;
@@ -33,6 +39,33 @@ export class Game{
     this.listenPeerJs()
    
   }
+
+  bind() {
+    this.startTime()
+  }
+
+ 
+
+  startTime(){
+    this.interval=setInterval(()=>{
+      if(this.countdown == 0){
+        this.isAnime1 = !this.isAnime1;
+      
+      }
+      if(this.countdown == 5){
+        this.isAnime1 = !this.isAnime1;
+        this.isAnime2 = !this.isAnime2;
+      
+      }
+      if(this.countdown == 10){
+        this.isAnime2 = !this.isAnime2;
+        this.isAnime1 = !this.isAnime1;
+        this.countdown=0
+      }
+      this.countdown++
+      //console.log(this.countdown)
+    }, 1000);
+}
 
   listenPeerJs(){
     this.peer.on("connection", (conn) => {
@@ -191,6 +224,7 @@ export class Game{
 
   detached() {
     clearInterval(this.interval);
+    
   }
 
   /** Buzze 
