@@ -1,0 +1,28 @@
+<template>
+  <require from="./game.scss"></require>
+  <require from="../../components/header/header"></require>
+  <section id="game" class="column"> 
+    <header></header>
+    <div class="column" style="margin-right:15vh;margin-left:15vh;">
+
+      <div class="container" show.bind="currentGamer">
+        <p class="count-down" style="margin-left: 120vh;">00:${countUp}</p>
+       
+          <div class="center" style="margin-bottom: 5vh;">
+            <!--p class="titre" style="margin-bottom: 2vh;" t="title_game_buzz"></p-->
+            <p class="question-game">${currentGamer.question3.description}</p>
+            
+          </div>
+          <div class="row center" style="margin-top:5vh;">
+            <input class="buzzer_red" value.bind="red" value="${currentGamer.question3.answer1}">
+            <input class="buzzer buzzer_yellow" value.bind="yellow"value="${currentGamer.question3.answer2}">
+          </div>
+          <div class="row center" style="margin-top:5vh;">
+            <input class="buzzer_green"value.bind="green"value="${currentGamer.question3.answer3}">
+            <input class="buzzer_blue" value.bind="blue"value="${currentGamer.question3.answer4}">
+          </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</template>

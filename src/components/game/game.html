@@ -6,44 +6,41 @@
     <div class="column" style="margin-right:20vh;margin-left:20vh;">
 
       <div class="container" show.bind="!currentGamer">
+       
         <div class="center">
          
           <div class="center parent" style="margin-top: 20vh">
          
             <p class.bind="isAnime1 ? 'show_message1' : ''">
-             <span style="font-size: 40pt;">Jouez et tentez de gagner 2 places  <br> pour un Dinner in the Sky  <br>
+             <span style="font-size: 60pt;">Jouez et tentez de gagner 2 places  <br> pour un Dinner in the Sky  <br>
             </span>
-             <span style="font-size: 20pt;">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</span>
-            
+             <span style="font-size: 50pt;">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</span>
             </p>
             <p class.bind="isAnime2 ? 'show_message1' : ''">
-              <span style="font-size: 40pt;">Speel mee en maak kans op 2 tickets voor Dinner in the Sky <br></span>
-              <span style="font-size: 20pt;">of 1 van de 10 Carrefour cadeaukaarten van 25 EUR</span>
+              <span style="font-size: 60pt;">Speel mee en maak kans op 2 tickets voor Dinner in the Sky <br></span>
+              <span style="font-size: 50pt;">of 1 van de 10 Carrefour cadeaukaarten van 25 EUR</span>
             </p>
-       
-         
         </div>
     
       </div>
 
-       
-       
-        <!--iframe width="100%" height="1000px" src="https://www.youtube.com/embed/tnJUmDxn1wU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
       </div>
       <div class="container" show.bind="currentGamer">
-        <div class="center" style="margin-bottom: 5vh;">
-          <p class="titre" style="margin-bottom: 2vh;" t="title_game_buzz"></p>
-          <p class="question-game">${currentGamer.question}</p>
-        </div>
-        <div class="center" style="margin-top:15vh;">
-          <p class="count-down">${countdown}</p>
-        </div>
-        <!--div class="center">
-          <button class="submit_btn" click.delegate="stopCountdown()"> BUZZER</button>
-        </div-->
-        <div class="center" style="margin-top: 10vh;">
-          <p style="font-size:30pt;font-weight:100">* toutes les données ont été relevées à date du 14/11/2022</p>
-        </div>
+        <p class="count-down" style="margin-left: 120vh;">00:${countUp}</p>
+       
+          <div class="center" style="margin-bottom: 5vh;">
+            <!--p class="titre" style="margin-bottom: 2vh;" t="title_game_buzz"></p-->
+            <p class="question-game">${currentGamer.question1.description}</p>
+            
+          </div>
+          <div class="row center" style="margin-top:5vh;">
+            <input class="buzzer_red" value.bind="red" value="${currentGamer.question1.answer1}">
+            <input class="buzzer buzzer_yellow" value.bind="yellow"value="${currentGamer.question1.answer2}">
+          </div>
+          <div class="row center" style="margin-top:5vh;">
+            <input class="buzzer_green"value.bind="green"value="${currentGamer.question1.answer3}">
+            <input class="buzzer_blue" value.bind="blue"value="${currentGamer.question1.answer4}">
+          </div>
       </div>
     </div>
     </div>

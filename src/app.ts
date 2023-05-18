@@ -16,10 +16,11 @@ export class App {
       { route: ['questions'],name: 'questions',moduleId: PLATFORM.moduleName("./components/questions/questions"), title:'questions' },
       { route: ['thanks_ipad'],name: 'thanks_ipad',moduleId: PLATFORM.moduleName("./components/thanks_ipad/thanks_ipad"), title:'thanks_ipad' },
       { route: ['game'],name: 'game',moduleId: PLATFORM.moduleName("./components/game/game"), title:'game' },
-      { route: ['question_base'],name: 'question_base',moduleId: PLATFORM.moduleName("./components/question_base/question_base"), title:'question_base' },
+      { route: ['game1'],name: 'game1',moduleId: PLATFORM.moduleName("./components/game1/game1"), title:'game1' },
+      { route: ['game2'],name: 'game2',moduleId: PLATFORM.moduleName("./components/game2/game2"), title:'game2' },
+      { route: ['game3'],name: 'game3',moduleId: PLATFORM.moduleName("./components/game3/game3"), title:'game3' },
       { route: ['thanks'],name: 'thanks',moduleId: PLATFORM.moduleName("./components/thanks/thanks"), title:'thanks' },
-      { route: ['screen_video'],name: 'screen_video',moduleId: PLATFORM.moduleName("./components/screen_video/screen_video"), title:'screen_video' },
-    
+      { route: ['ranking'],name: 'ranking',moduleId: PLATFORM.moduleName("./components/ranking/ranking"), title:'ranking' },
     ]);
   }
 

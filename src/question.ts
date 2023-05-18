@@ -1,7 +1,9 @@
 
 export class ObjQuestion{
   description:string;
-  answer:number;
-  min?=0;
-  max=0
+  answer1:any;
+  answer2:any;
+  answer3:any;
+  answer4:any;
+  valid:any
 }

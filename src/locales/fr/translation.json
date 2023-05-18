@@ -1,11 +1,7 @@
 {
   "title":"titre en fr",
-  "q1":"Combien de ménages faisaient  partie de la database Carrefour en 2021?",
-  "q2":"Combien y a-t-il de magasins Carrefour en Belgique, tous formats confondus (hypermarchés, supermarchés market, magasins de proximité express), à date du 14/11/2022 ?",
-  "q3":"Combien de transactions ont été réalisées en 2021 dans tous les magasins Carrefour de Belgique ?",
-  "q4":"Combien de produits différents compte en moyenne un hypermarché Carrefour en Belgique ?",
-  "q5":"Combien de campagnes médiatiques ont été menées par Carrefour Links Belgium pour des annonceurs en 2021 ?",
-  "q6":"Combien de personnes auront participé au concours lors du BAM ?",
+  
+  
   "firstname":"Prénom",
   "name":"Nom",
   "sex":"Sexe",
@@ -100,7 +96,8 @@
   "thanks_description":"Pour démarrer le jeu, appuyez sur le buzzer",
   "game_title":"Enregistrez-vous sur la tablette pour participer",
   "game_thanks_title":"Merci pour votre participation!",
-  "game_thanks":"Les participants les plus proches seront contactés dans les plus brefs délais.",
+  "thanks_score":"points",
+  "game_thanks":"Les gagnants seront contactés par e-mail à partir du 29/05/2023",
   "question_base":"Buzzer pour continuer !"
 
 }

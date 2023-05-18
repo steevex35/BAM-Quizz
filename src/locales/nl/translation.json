@@ -1,11 +1,7 @@
 {
   "title":"titre en flamish",
-  "q1":"Hoeveel huishoudens zaten er in de Carrefour-database in 2021?",
-  "q2":"Hoeveel Carrefour-winkels zijn er in België (hypermarkten, market supermarkten en express-buurtwinkels samen), te tellen vanaf 14/11/2022?",
-  "q3":"Hoeveel kassatransacties vonden in 2021 plaats in alle Carrefour-winkels in België samen?",
-  "q4":"Hoeveel verschillende producten kan je gemiddeld terugvinden in een Carrefour hypermarkt in België?",
-  "q5":"Hoeveel mediacampagnes werden door Carrefour Links Belgium uitgevoerd in 2021, op vraag van adverteerders?",
-  "q6":"Hoeveel mensen zullen hebben deelgenomen aan de wedstrijd tijdens BAM?",
+ 
+
   "firstname":"Voornaam",
   "name":"Naam",
   "sex":"Sexe",
@@ -106,6 +102,7 @@
   "thanks_description":"Druk op de knop om het spel te starten",
   "game_title":"Registreer je op de tablet om deel te nemen",
   "game_thanks_title":"Dank u voor uw deelname !",
-  "game_thanks":"De dichtstbijzijnde deelnemers worden zo snel mogelijk gecontacteerd.",
+  "game_thanks":"De winnaars worden per e-mail gecontacteerd vanaf 29/05/2023.",
+  "thanks_score":"punten",
   "question_base":"Druk op de knop om door te gaan!"
 }
