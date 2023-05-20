@@ -86,6 +86,17 @@ section#game{
     border: none;
     border-radius: 2rem;
   }
+  
+  .won{
+    background-color: rgba(0, 255, 0, 0.616);
+    border-radius: 3rem;
+  }
+
+  .loose{
+    background-color: rgba(255, 0, 0, 0.616);
+    border-radius: 3rem;
+  }
+
   .buzzer_yellow{
     text-align: center;
     line-height: 20rem;

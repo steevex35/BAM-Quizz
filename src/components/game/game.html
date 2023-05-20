@@ -25,7 +25,7 @@
       </div>
 
       </div>
-      <div class="container" show.bind="currentGamer">
+      <div class="container"ref="gamer_screen" show.bind="currentGamer">
         <p class="count-down" style="margin-left: 120vh;">00:${countUp}</p>
        
           <div class="center" style="margin-bottom: 5vh;">
@@ -34,12 +34,12 @@
             
           </div>
           <div class="row center" style="margin-top:5vh;">
-            <input class="buzzer_red" value.bind="red" value="${currentGamer.question1Obj.answer1}">
-            <input class="buzzer buzzer_yellow" value.bind="yellow"value="${currentGamer.question1Obj.answer2}">
+            <input class="buzzer_red" value.bind="red"  value="${currentGamer.question1Obj.answer1}">
+            <input class="buzzer buzzer_yellow" value.bind="yellow" value="${currentGamer.question1Obj.answer2}">
           </div>
           <div class="row center" style="margin-top:5vh;">
-            <input class="buzzer_green"value.bind="green"value="${currentGamer.question1Obj.answer3}">
-            <input class="buzzer_blue" value.bind="blue"value="${currentGamer.question1Obj.answer4}">
+            <input class="buzzer_green"value.bind="green" value="${currentGamer.question1Obj.answer3}">
+            <input class="buzzer_blue" value.bind="blue" value="${currentGamer.question1Obj.answer4}">
           </div>
       </div>
     </div>

@@ -37,6 +37,8 @@ export class Game{
   private green:any;
   private blue:any;
 
+  private gamer_screen;
+
 
 
   constructor(private router:Router, private i18n:I18N){
@@ -278,14 +280,16 @@ export class Game{
   checkValidQuestion(value1:string,value2:string){
     if(value1 === value2){
       console.log("GG")
+      this.gamer_screen.classList.add("won");
       this.currentGamer.question_answer1=value1;
       this.currentGamer.response=10;
-      this.saveGamer();
+     // this.saveGamer();
     }else{
       console.log("Looser")
+      this.gamer_screen.classList.add("loose");
       this.currentGamer.question_answer1=value1;
       this.currentGamer.response=0
-      this.saveGamer();
+     // this.saveGamer();
     }
   }
 
