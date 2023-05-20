@@ -34,6 +34,7 @@ export class Game2{
    */
   async saveGamer(){
     localStorage.setItem('currentGamer', JSON.stringify(this.currentGamer));
+    this.postGamer()
     this.router.navigateToRoute('thanks')
   }
 
@@ -63,13 +64,19 @@ export class Game2{
    * Vert 4
   */
   checkValidQuestion(value1:string,value2:string){
+    this.currentGamer.question1=this.currentGamer.question1Obj.description;
+    this.currentGamer.question2=this.currentGamer.question2Obj.description;
+    this.currentGamer.question3=this.currentGamer.question3Obj.description;
+    this.currentGamer.question4=this.currentGamer.question4Obj.description;
     if(value1 === value2){
       console.log("GG")
-      this.currentGamer.question_awnser4=10;
+      this.currentGamer.question_answer4=value1;
+      this.currentGamer.response=this.currentGamer.response + 10;
       this.saveGamer();
     }else{
       console.log("Looser")
-      this.currentGamer.question_awnser4=0
+      this.currentGamer.question_answer4=value1;
+      this.currentGamer.response=this.currentGamer.response + 0;
       this.saveGamer();
     }
   }
@@ -79,24 +86,24 @@ export class Game2{
       //this.tapeBuzzer()
       //console.log("Buzzer Bleu pushed")
       //console.log(this.blue)
-      this.checkValidQuestion(this.blue,this.currentGamer.question4.valid)
+      this.checkValidQuestion(this.blue,this.currentGamer.question4Obj.valid)
     }
     if((event.key == 2)){
       //console.log("Buzzer Rouge pushed")
       //console.log(this.red)
-      this.checkValidQuestion(this.red,this.currentGamer.question4.valid)
+      this.checkValidQuestion(this.red,this.currentGamer.question4Obj.valid)
     }
     if((event.key == 3)){
       //this.stopCountdown()
       //this.countTapeBuzz=0
       //console.log("Buzzer Jaune pushed")
       //console.log(this.yellow)
-      this.checkValidQuestion(this.yellow,this.currentGamer.question4.valid)
+      this.checkValidQuestion(this.yellow,this.currentGamer.question4Obj.valid)
     }
     if((event.key == 4)){
       //console.log("Buzzer Vert pushed")
       //console.log(this.green)
-      this.checkValidQuestion(this.green,this.currentGamer.question4.valid)
+      this.checkValidQuestion(this.green,this.currentGamer.question4Obj.valid)
     }
   }
 

@@ -131,10 +131,10 @@ export class Game{
 
   addQuestionCurrentGamer(g:User){
     //console.log(random, this.listQuestions[random]);
-   g.question1=this.questionsAleatoires[0]
-   g.question2=this.questionsAleatoires[1]
-   g.question3=this.questionsAleatoires[2]
-   g.question4=this.questionsAleatoires[3]
+   g.question1Obj=this.questionsAleatoires[0]
+   g.question2Obj=this.questionsAleatoires[1]
+   g.question3Obj=this.questionsAleatoires[2]
+   g.question4Obj=this.questionsAleatoires[3]
 
     console.log(g)
   }
@@ -278,11 +278,13 @@ export class Game{
   checkValidQuestion(value1:string,value2:string){
     if(value1 === value2){
       console.log("GG")
-      this.currentGamer.question_awnser1=10;
+      this.currentGamer.question_answer1=value1;
+      this.currentGamer.response=10;
       this.saveGamer();
     }else{
       console.log("Looser")
-      this.currentGamer.question_awnser1=0
+      this.currentGamer.question_answer1=value1;
+      this.currentGamer.response=0
       this.saveGamer();
     }
   }
@@ -292,24 +294,24 @@ export class Game{
       //this.tapeBuzzer()
       //console.log("Buzzer Bleu pushed")
       //console.log(this.blue)
-      this.checkValidQuestion(this.blue,this.currentGamer.question1.valid)
+      this.checkValidQuestion(this.blue,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 2)){
       //console.log("Buzzer Rouge pushed")
       //console.log(this.red)
-      this.checkValidQuestion(this.red,this.currentGamer.question1.valid)
+      this.checkValidQuestion(this.red,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 3)){
       //this.stopCountdown()
       //this.countTapeBuzz=0
       //console.log("Buzzer Jaune pushed")
       //console.log(this.yellow)
-      this.checkValidQuestion(this.yellow,this.currentGamer.question1.valid)
+      this.checkValidQuestion(this.yellow,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 4)){
       //console.log("Buzzer Vert pushed")
       //console.log(this.green)
-      this.checkValidQuestion(this.green,this.currentGamer.question1.valid)
+      this.checkValidQuestion(this.green,this.currentGamer.question1Obj.valid)
     }
      
   }

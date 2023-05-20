@@ -9,15 +9,18 @@ export class User{
   email:string;
   reglement:boolean;
   newsletter:boolean=false;
-  question1?:ObjQuestion;
-  question_awnser1?;
-  question2?:ObjQuestion;
-  question_awnser2?;
-  question3?:ObjQuestion;
-  question_awnser3?;
-  question4?:ObjQuestion;
-  question_awnser4?;
-  max?=0;
+  question1Obj?:ObjQuestion;
+  question1?:string;
+  question_answer1?;
+  question2Obj?:ObjQuestion;
+  question2?:string;
+  question_answer2?;
+  question3Obj?:ObjQuestion;
+  question3?:string;
+  question_answer3?;
+  question4Obj?:ObjQuestion;
+  question4?:string;
+  question_answer4?;
   lng?;
   response:number;
 }

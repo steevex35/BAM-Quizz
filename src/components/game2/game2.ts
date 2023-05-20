@@ -64,11 +64,13 @@ export class Game2{
   checkValidQuestion(value1:string,value2:string){
     if(value1 === value2){
       console.log("GG")
-      this.currentGamer.question_awnser3=10;
+      this.currentGamer.question_answer3=value1;
+      this.currentGamer.response=this.currentGamer.response + 10;
       this.saveGamer();
     }else{
       console.log("Looser")
-      this.currentGamer.question_awnser3=0
+      this.currentGamer.question_answer3=value1;
+      this.currentGamer.response=this.currentGamer.response + 0;
       this.saveGamer();
     }
   }
@@ -78,24 +80,24 @@ export class Game2{
       //this.tapeBuzzer()
       //console.log("Buzzer Bleu pushed")
       //console.log(this.blue)
-      this.checkValidQuestion(this.blue,this.currentGamer.question3.valid)
+      this.checkValidQuestion(this.blue,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 2)){
       //console.log("Buzzer Rouge pushed")
       //console.log(this.red)
-      this.checkValidQuestion(this.red,this.currentGamer.question3.valid)
+      this.checkValidQuestion(this.red,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 3)){
       //this.stopCountdown()
       //this.countTapeBuzz=0
       //console.log("Buzzer Jaune pushed")
       //console.log(this.yellow)
-      this.checkValidQuestion(this.yellow,this.currentGamer.question3.valid)
+      this.checkValidQuestion(this.yellow,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 4)){
       //console.log("Buzzer Vert pushed")
       //console.log(this.green)
-      this.checkValidQuestion(this.green,this.currentGamer.question3.valid)
+      this.checkValidQuestion(this.green,this.currentGamer.question3Obj.valid)
     }
      
   }
