@@ -98,6 +98,9 @@
   "game_thanks_title":"Merci pour votre participation!",
   "thanks_score":"points",
   "game_thanks":"Les gagnants seront contactés par e-mail à partir du 29/05/2023",
-  "question_base":"Buzzer pour continuer !"
+  "question_base":"Buzzer pour continuer !",
+
+  "getReady_1":"Vous êtes prêt ?",
+  "getReady_2":"Utilisez les buzzers pour répondre aux questions !"
 
 }

@@ -104,5 +104,8 @@
   "game_thanks_title":"Dank u voor uw deelname !",
   "game_thanks":"De winnaars worden per e-mail gecontacteerd vanaf 29/05/2023.",
   "thanks_score":"punten",
-  "question_base":"Druk op de knop om door te gaan!"
+  "question_base":"Druk op de knop om door te gaan!",
+
+  "getReady_1":"Bent u klaar? ",
+  "getReady_2":"Gebruik de buzzers om te antwoorden!"
 }

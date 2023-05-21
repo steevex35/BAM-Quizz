@@ -43,6 +43,9 @@ export class Game{
 
   private counter: { min: number, sec: number }//new
   private clock;//new
+
+  private getReady=true;
+  private getReadyCounter=10;
   
 
 
@@ -50,7 +53,7 @@ export class Game{
   constructor(private router:Router, private i18n:I18N){
     this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
     //console.log(this.listQuestions);
-    this.startTimer()//new
+    this.countdownGetready()
     this.startGame()
   }
 
@@ -217,6 +220,19 @@ export class Game{
         this.stopTimer()
       }
     }, 1000)
+  }
+
+
+  countdownGetready() {
+    const interval = setInterval(() => {
+      this.getReadyCounter--;
+      if (this.getReadyCounter < 0) {
+        clearInterval(interval);
+        console.log("Countdown terminé !");
+        this.getReady=false;
+        this.startTimer()//new
+      }
+    }, 1000); // 1000 ms = 1 seconde
   }
 
   /**

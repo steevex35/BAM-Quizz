@@ -10,9 +10,32 @@ import { User } from 'user';
 export class ranking{
 
 
+  private currentUser: User;
+  private listOfGamers = [];
 
   constructor(private router:Router, private i18n:I18N){
-  
+    this.i18n.setLocale('fr');
+     this.fetchGamer()
+    setInterval(this.fetchGamer,30000);
+   
+  }
+
+  async fetchGamer(){
+    const url="http://192.168.129.10/php-api/api/getUser.php"
+    const http = new HttpClient();
+    await http.fetch(url,{
+      method: "POST",
+      headers: {
+    }
+    })
+    .then(response => response.json())
+    .then(async data => {
+       this.listOfGamers=data
+       console.log("we get datas : "+data)
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
  

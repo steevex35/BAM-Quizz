@@ -5,15 +5,27 @@
     <header></header>
     <div class="column" style="margin-right:20vh;margin-left:20vh;">
       <div class="container" >
-        <div class="center" style="margin-bottom: 5vh; margin-top: 20vh;">
+        <div class="center" style="margin-bottom: 5vh; margin-top: 5vh;">
           <div class="center">
-            <span class="thanks_title"> RANKING </span> 
-            
+            <p class="thanks_title">Jouez et tentez de gagner 2 <br>
+              places pour un Dinner in the Sky
+            </p>
+            <p class="thanks_title" style="font-size: 30pt!important;">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</p>
+            <br>
+            <span class="thanks_title"> Top scores </span> 
+            <div class="center" width="80%">
+            <table style="margin-left: auto;margin-right: auto;" class="subtitle">
+              <tr repeat.for="gamer of listOfGamers">
+                <td>${$index+1}.</td>
+                <td style="text-align: left!important;"> ${gamer.prenom} ${gamer.nom.charAt(0)}.</td>
+                <td style="padding-left: 150px!important;"> ${gamer.response} <span t="thanks_score"></span></td>
+              </tr>
+            </table>
+          </div>
           </div>
         </div>
       
       </div>
-    </div>
     </div>
   </section>
 </template>
