@@ -1,7 +1,7 @@
 section#game{
 
   height: 100vh;
-  $myheight: 15rem;
+  $myheight: 20rem;
   .parent{
     height: $myheight;
     p{
@@ -66,12 +66,7 @@ section#game{
     font-size: 60pt;
   }
 
-  .count-down{
-    font-family: pixel-lcd;
-    color: #1E5BC6;
-    font-size: 40pt;
-    letter-spacing: 21px;
-  }
+  
 
   .buzzer_red{
     text-align: center;
@@ -87,15 +82,6 @@ section#game{
     border-radius: 2rem;
   }
   
-  .won{
-    background-color: rgba(0, 255, 0, 0.616);
-    border-radius: 3rem;
-  }
-
-  .loose{
-    background-color: rgba(255, 0, 0, 0.616);
-    border-radius: 3rem;
-  }
 
   .buzzer_yellow{
     text-align: center;

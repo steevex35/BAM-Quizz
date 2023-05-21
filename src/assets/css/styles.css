@@ -63,6 +63,32 @@ body {
   margin-left: 35vh;
 }
 
+.won{
+  position: absolute;
+  display: none;
+  top: 50vh;
+  right: 80vh;
+  background-color: rgba(0, 255, 0, 0.616);
+  border-radius: 3rem;
+}
+.display_reward{
+  display: flex!important;
+}
+
+.loose{
+  position: absolute;
+  display: none;
+  top: 50vh;
+  right: 80vh;
+  background-color: rgba(255, 0, 0, 0.616);
+  border-radius: 3rem;
+}
+
+.count-down{
+  color: #1E5BC6;
+  font-size: 80pt!important;
+}
+
 
 /* Desktop */
 @media all and (min-width: 960px) {

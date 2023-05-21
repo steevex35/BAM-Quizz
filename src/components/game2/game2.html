@@ -1,18 +1,21 @@
 <template>
-  <require from="./game.scss"></require>
+  <require from="./game2.scss"></require>
   <require from="../../components/header/header"></require>
-  <section id="game" class="column"> 
+  <section id="game2" class="column"> 
     <header></header>
     <div class="column" style="margin-right:15vh;margin-left:15vh;">
 
       <div class="container" show.bind="currentGamer">
-        <p class="count-down" style="margin-left: 120vh;">00:${countUp}</p>
-       
+        <div class="row" style="justify-content: flex-end!important;">
+          <img src="../../assets/img/clock.png" style="margin-left: 20px;" width="128px">
+          <p class="count-down">00:${counter.sec}</p>
+        </div>
           <div class="center" style="margin-bottom: 5vh;">
             <!--p class="titre" style="margin-bottom: 2vh;" t="title_game_buzz"></p-->
             <p class="question-game">${currentGamer.question3Obj.description}</p>
             
           </div>
+          <div if.bind="!game_done">
           <div class="row center" style="margin-top:5vh;">
             <input class="buzzer_red" value.bind="red" value="${currentGamer.question3Obj.answer1}">
             <input class="buzzer buzzer_yellow" value.bind="yellow"value="${currentGamer.question3Obj.answer2}">
@@ -21,6 +24,13 @@
             <input class="buzzer_green"value.bind="green"value="${currentGamer.question3Obj.answer3}">
             <input class="buzzer_blue" value.bind="blue"value="${currentGamer.question3Obj.answer4}">
           </div>
+        </div>
+        <div class="center">
+          <img class="won"  ref="reward_win" src="../../assets/img/win.png">
+        </div>
+        <div class="center">
+          <img class="loose"  ref="reward_loose" src="../../assets/img/loose.png">
+        </div>
       </div>
     </div>
     </div>

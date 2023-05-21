@@ -25,7 +25,7 @@ export class Game{
   private countdown=0;
   private interval:any;
   
-  private countUp=0;
+  private countdownGame=0;
   private intervalUp:any;
 
   private isAnime1 = false
@@ -37,13 +37,20 @@ export class Game{
   private green:any;
   private blue:any;
 
-  private gamer_screen;
+  private reward_win;
+  private reward_loose;
+  private game_done = false;
+
+  private counter: { min: number, sec: number }//new
+  private clock;//new
+  
 
 
 
   constructor(private router:Router, private i18n:I18N){
     this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
     //console.log(this.listQuestions);
+    this.startTimer()//new
     this.startGame()
   }
 
@@ -193,22 +200,23 @@ export class Game{
   }
 
 
-   
-
-  /**
-   * To move 
-   */
   
-
-  startTimer(){
-    this.intervalUp=setInterval(()=>{
-      this.countUp++
-    }, 1000);
+//new
+  stopTimer(){
+    clearInterval(this.clock);
   }
-
-
-  stopCountdown(){
-    this.buzzer = true;
+  
+//new
+  startTimer() {
+    this.counter = { min: 0, sec: 20 } // choose whatever you want
+    this.clock = setInterval(() => {
+      if(this.counter.sec != 0)
+        this.counter.sec --;
+      if (this.counter.min === 0 && this.counter.sec == 0) {
+        this.checkValidQuestion('time over',this.currentGamer.question1Obj.valid)
+        this.stopTimer()
+      }
+    }, 1000)
   }
 
   /**
@@ -217,39 +225,6 @@ export class Game{
   async saveGamer(){
     localStorage.setItem('currentGamer', JSON.stringify(this.currentGamer));
     this.router.navigateToRoute('game1')
-  }
-
-  /**
-   * Send info to backend
-   */
-  async postGamer(){
-    //const url="http://192.168.129.10/php-api/api/create.php"
-    const url="http://192.168.0.3/php-api/api/create.php"
-    const http = new HttpClient();
-    await http.fetch(url,{
-      method: "POST",
-      body: JSON.stringify(this.currentGamer),
-      headers:{
-        
-      }
-    })
-    .then(response => response)
-    .then(async data => {
-       console.log(data.text());
-       if(data.status == 200){
-        const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-        await sleep(2000);
-        this.currentGamer=null
-        localStorage.setItem('currentGamer', JSON.stringify(this.currentGamer));
-        this.router.navigateToRoute('question_base')
-       }
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-
-  
   }
 
   /** On page activate */
@@ -269,6 +244,7 @@ export class Game{
 
   detached() {
     clearInterval(this.interval);
+    clearInterval(this.clock); //new
   }
 
   /** Buzze 
@@ -277,19 +253,25 @@ export class Game{
    * Jaune 3
    * Vert 4
   */
-  checkValidQuestion(value1:string,value2:string){
+  async checkValidQuestion(value1:string,value2:string){
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    this.stopTimer();
     if(value1 === value2){
-      console.log("GG")
-      this.gamer_screen.classList.add("won");
+      //console.log("GG")
+      this.game_done=true
+      this.reward_win.classList.add("display_reward")
       this.currentGamer.question_answer1=value1;
-      this.currentGamer.response=10;
-     // this.saveGamer();
+      this.currentGamer.response=10*this.counter.sec;//new
+      await delay(2000);
+      this.saveGamer();
     }else{
-      console.log("Looser")
-      this.gamer_screen.classList.add("loose");
+      //console.log("Looser")
+      this.game_done=true
+      this.reward_loose.classList.add("display_reward")
       this.currentGamer.question_answer1=value1;
-      this.currentGamer.response=0
-     // this.saveGamer();
+      this.currentGamer.response=0*this.counter.sec//new
+      await delay(2000);
+      this.saveGamer();
     }
   }
 

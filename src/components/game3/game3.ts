@@ -20,12 +20,37 @@ export class Game2{
   private green:any;
   private blue:any;
 
+  private reward_win;
+  private reward_loose;
+  private game_done = false;
+
+  private counter: { min: number, sec: number }//new
+  private clock;//new
+
 
 
   constructor(private router:Router, private i18n:I18N){
     this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
     this.currentGamer = JSON.parse(localStorage.getItem('currentGamer')) || null;
-    
+    this.startTimer()//new
+  }
+
+   //new
+   stopTimer(){
+    clearInterval(this.clock);
+  }
+  
+//new
+  startTimer() {
+    this.counter = { min: 0, sec: 20 } // choose whatever you want
+    this.clock = setInterval(() => {
+      if(this.counter.sec != 0)
+        this.counter.sec --;
+      if (this.counter.min === 0 && this.counter.sec == 0) {
+        this.checkValidQuestion('time over',this.currentGamer.question1Obj.valid)
+        this.stopTimer()
+      }
+    }, 1000)
   }
 
 
@@ -55,6 +80,7 @@ export class Game2{
 
   detached() {
     clearInterval(this.interval);
+    clearInterval(this.clock); //new
   }
 
   /** Buzze 
@@ -63,20 +89,28 @@ export class Game2{
    * Jaune 3
    * Vert 4
   */
-  checkValidQuestion(value1:string,value2:string){
+  async checkValidQuestion(value1:string,value2:string){
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    this.stopTimer();
     this.currentGamer.question1=this.currentGamer.question1Obj.description;
     this.currentGamer.question2=this.currentGamer.question2Obj.description;
     this.currentGamer.question3=this.currentGamer.question3Obj.description;
     this.currentGamer.question4=this.currentGamer.question4Obj.description;
     if(value1 === value2){
-      console.log("GG")
+      //console.log("GG")
+      this.game_done=true
+      this.reward_win.classList.add("display_reward")
       this.currentGamer.question_answer4=value1;
-      this.currentGamer.response=this.currentGamer.response + 10;
+      this.currentGamer.response=this.currentGamer.response + 10*this.counter.sec;
+      await delay(2000);
       this.saveGamer();
     }else{
-      console.log("Looser")
+      //console.log("Looser")
+      this.game_done=true
+      this.reward_loose.classList.add("display_reward")
       this.currentGamer.question_answer4=value1;
-      this.currentGamer.response=this.currentGamer.response + 0;
+      this.currentGamer.response=this.currentGamer.response + 0*this.counter.sec;
+      await delay(2000);
       this.saveGamer();
     }
   }
