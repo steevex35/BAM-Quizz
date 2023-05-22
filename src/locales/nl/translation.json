@@ -91,7 +91,7 @@
   "title_form":"Vul uw gegevens in en waag je kans !",
   "No":"Nee, Bedankt",
   "ok":"Bevestigen",
-  "title_reglement":"Wedstrijd regelement *",
+  "title_reglement":"REGLEMENT VAN DE GONDOLA DAY-WEDSTRIJD",
   "title_questions":" Vul jouw gegevens in en waag je kans!",
   "title_thank_ipad":"Bedankt voor het registreren!",
   "description_thank_ipad":"Het vervolg op het grote scherm!",
@@ -107,5 +107,13 @@
   "question_base":"Druk op de knop om door te gaan!",
 
   "getReady_1":"Bent u klaar? ",
-  "getReady_2":"Gebruik de buzzers om te antwoorden!"
+  "getReady_2":"Gebruik de buzzers om te antwoorden!",
+
+  "thanks_score_votre":"Uw score: ",
+  "play_again":"U kan opnieuw meedoen om uw score te verbeteren.​",
+
+  "ranking_1":"Speel mee en maak kans op 2",
+  "ranking_2":"tickets voor Dinner in the Sky",
+  "ranking_3":"of 1 van de 10 Carrefour cadeaukaarten van 25 EUR",
+  "ranking_4":"Top scores"
 }

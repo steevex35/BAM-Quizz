@@ -3,53 +3,61 @@
   <require from="../../components/header/header"></require>
   <section id="form" class="column"> 
     <header></header>
-    <div class="column" style="margin-right:45vh;margin-left:45vh;">
+    <div class="column" style="margin-right:35vh;margin-left:35vh;">
       <div class="container" >
         <div class="">
           <p class="titre" t="title_form" style="font-weight:bold"></p>
         </div>
         <p class="center" style="color:red ;" if.bind="$errorMessage==null">${errorMessage}</p>
-        
-        <ul class="wrapper">
-            <li class="form-row">
-              <label for="firstName" t="firstname"></label>
-              <input type="text" id="firstName" value.bind="prenom">
-            </li>
-            <li class="form-row">
-              <label for="name" t="name"></label>
-              <input type="text" id="name" value.bind="nom">
-            </li>
-            <li class="form-row">
-              <label for="sex" t="sex"></label>
-              <input type="radio"  name="sex"  value.bind="1" checked.bind="sex"><span style="font-size: 20pt;" t="sex_f"></span>
-              <input type="radio"  name="sex"  value.bind="2" checked.bind="sex"><span style="font-size: 20pt;" t="sex_m"></span>
-              <input type="radio"  name="sex"  value.bind="3" checked.bind="sex"><span style="font-size: 20pt;" t="sex_x"></span>
-              
-            </li>
-            <li class="form-row">
-              <label for="entreprise" t="companie"></label>
-              <input type="text" id="entreprise" value.bind="entreprise">
-            </li>
-            <li class="form-row">
-              <label for="email" t="email"></label>
-              <input type="text" id="email" value.bind="email">
-            </li>
-            <li class="form-row">
-              <input type="checkbox" name="reglement" value.bind="1" checked.bind="reglement">
-              <a click.delegate="clickReglement()"><u><p t="reglement" style="width:500px; height: 30px;"></p></u></a>
-            </li>
-            <li class="form-row">
-             
-              <input type="checkbox" name="news" value.bind="1" checked.bind="newsletter" style="width:30px;">
-              <p t="newsletter" style="width: 500px;height: 30px;"></p>
-            </li>        
-          </ul>
-    
-
-          
-      
-
-        <div class="row center">
+        <table style="margin-left: auto;margin-right: auto; margin-top: 20px;">
+          <tr>
+            <td class="table_label"> <label for="firstName" t="firstname"></label></td>
+            <td class="table_input"> <input type="text" id="firstName" value.bind="prenom"></td>
+          </tr>
+          <tr>
+            <td class="table_label"> <label for="name" t="name"></label> </td>
+            <td class="table_input">   <input type="text" id="name" value.bind="nom"></td>
+          </tr>
+          <tr>
+            <td class="table_label"> <label for="sex" t="sex"></label></td>
+            <td class="table_input_radio"> 
+              <input type="radio"  name="sex"  value.bind="1" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_f"></span>
+              <input type="radio"  name="sex"  value.bind="2" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_m"></span>
+              <input type="radio"  name="sex"  value.bind="3" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_x"></span>
+            </td>
+          </tr>
+          <tr>
+            <td class="table_label">  <label for="entreprise" t="companie"></label></td>
+            <td class="table_input">  <input type="text" id="entreprise" value.bind="entreprise"></td>
+          </tr>
+          <tr>
+            <td class="table_label"> <label for="email" t="email"></label> </td>
+            <td class="table_input"> <input type="text" id="email" value.bind="email"></td>
+          </tr>
+          <tr>
+            <td class="table_label"> </td>
+            <td class="table_input"> 
+              <table>
+                <tr>
+                  <td> <input type="checkbox" name="reglement" value.bind="1" checked.bind="reglement"></td>
+                  <td style="padding-left: 20px!important;"> <a click.delegate="clickReglement()"><u style="color: #005BB0;"><span t="reglement"></span></u></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="table_label"></td>
+            <td class="table_input">
+              <table>
+                <tr>
+                  <td> <input type="checkbox" name="news" value.bind="1" checked.bind="newsletter"></td>
+                  <td style="padding-left: 20px!important;"> <span t="newsletter"></span></td></td>
+                </tr>
+              </table>
+          </tr>
+          <tr>
+        </table>
+        <div class="row center" style="justify-content: space-between;">
           <button  class="submit_btn" click.delegate="retour()"t="No" ></button>
           <button  class="submit_btn" click.delegate="validate()"t="ok" ></button>
         </div>

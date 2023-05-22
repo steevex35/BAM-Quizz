@@ -2,17 +2,21 @@
   <require from="./ranking.scss"></require>
   <require from="../../components/header/header"></require>
   <section id="ranking" class="column"> 
-    <header></header>
-    <div class="column" style="margin-right:20vh;margin-left:20vh;">
+    <div class="center">
+      <img src="../../assets/img/CarrefourLinks-White-V.png" width="370px">
+    </div>
+   
+    <div class="column">
       <div class="container" >
-        <div class="center" style="margin-bottom: 5vh; margin-top: 5vh;">
+        <div class="center" style="margin-bottom: 5vh">
           <div class="center">
-            <p class="thanks_title">Jouez et tentez de gagner 2 <br>
-              places pour un Dinner in the Sky
+            <p class="thanks_title">
+              <span t="ranking_1"></span><br>
+              <span t="ranking_2"></span>
             </p>
-            <p class="thanks_title" style="font-size: 30pt!important;">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</p>
+            <p t="ranking_3"></p>
             <br>
-            <span class="thanks_title"> Top scores </span> 
+            <span class="thanks_title" t="ranking_4"></span> 
             <div class="center" width="80%">
             <table style="margin-left: auto;margin-right: auto;" class="subtitle">
               <tr repeat.for="gamer of listOfGamers">

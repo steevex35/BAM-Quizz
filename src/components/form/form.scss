@@ -2,63 +2,79 @@ section#form{
 
   height: 100vh;
   p{
-    color:#1E5BC6;
+    color:#005BB0;
     font-size: 16pt;
+    font-family: Open-Sans-regular;
     font-weight: 100;
+  }
+
+  .container{
+    padding-top: 0vh!important;
   }
 
   .titre{
     text-align: center;
-    color: #1E5BC6;
-    font-size: 20pt;
+    font-family: Open-Sans-bold;
+    color: #005BB0;
+    font-size: 45px;
   }
 
   .margin20{
     margin-bottom: 20px;
   }
 
-  .submit_btn{
-    padding: 2rem;
-    margin: 2rem;
-    font-weight: bold;
-    font-size: 18pt;
-    color: white;
-    background: #0970E6 0% 0% no-repeat padding-box;
-    width: 350px;
-    border: #0970E6;
-  }
-
-  input[type=checkbox] {
+input[type=checkbox] {
     transform: scale(1.0);
-    margin-left: 50px;
-    zoom: 3.5;
+    zoom: 4.5;
    
 }
 input[type=radio] {
   transform: scale(1.0);
   margin-left: 30px;
-  zoom: 3.5;
-  border: 1px solid #1E5BC6;
+  zoom: 4.5;
+  border: 1px solid #005BB0;
   
+}
+
+.table_label{
+  text-align: left!important;
+  padding-bottom: 10px!important;
+}
+.table_input{
+  padding-left: 150px!important;
+  padding-bottom: 10px!important;
+}
+
+.table_input_radio{
+  padding-left: 10px!important;
+  padding-bottom: 10px!important;
+}
+table .table_label {
+  width: 240px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 input[type=text] {
   border: 1px solid var(--unnamed-color-1e5bc6);
-  border: 1px solid #1E5BC6;
+  border: 1px solid #005BB0;
   color:#1E5BC6;
-  font-size: 16pt ;
-  
+  font-size: 35px;
+  height: 62px;
+  width: 640px;
+  padding: 10px;
+  font-family: Open-Sans-regular;
 }
 
 label{
-  color:#1E5BC6 ;
-  font-size: 16pt;
-  font-weight: 100;
+  color:#005BB0 ;
+  font-family: Open-Sans-regular;
+  font-size: 35px;
 }
 span{
-  color:#1E5BC6 ;
-  font-size: 26pt!important;
-  font-weight: 100;
+  color:#005BB0 ;
+  font-family: Open-Sans-regular;
 }
 
 .wrapper {

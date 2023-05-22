@@ -29,8 +29,12 @@
     </ux-dialog-header>
     <ux-dialog-body style="margin-left:20px ;">
       <p class="titre" style="margin-bottom: 5vh;" t="title_reglement"></p>
-      
-      <div style="font-weight: 100;">
+      <div>
+        <p>
+          ${displayR}
+        </p>
+      </div>
+      <!--div style="font-weight: 100;">
         <h4 t="chapter_1"></h4>
         <p t="chapter_1_p1"></p>
       
@@ -121,7 +125,7 @@
         <br>
         <h4 t="chapter_8"></h4>
         <p t="chapter_8_p1"></p>
-      </div>
+      </div-->
       <div class="row center" style="margin-bottom:5vh; margin-top:2vh">
         <button  class="submit_btn" click.trigger="dialogController.cancel()" t="title_reglemen_button" ></button>
       </div>

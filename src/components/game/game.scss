@@ -10,6 +10,23 @@ section#game{
       overflow: hidden;
     }
   }
+
+  .img_gamer{
+    border-radius: 50%;
+    margin-bottom: 1vh;
+  }
+  .game_no_gamer_title{
+    text-align: center;
+    font-family: Open-Sans-bold;
+    color: #005BB0;
+    font-size: 85px;
+  }
+  .game_no_gamer_subtitle{
+    text-align: center;
+    font-family: Open-Sans-regular;
+    color: #005BB0;
+    font-size: 80px;
+  }
   .show_message1{
     animation: fadein1 5s ;
     animation-delay: 0s ;
@@ -38,116 +55,5 @@ section#game{
     }
    
   }
-
-
-  p{
-    color:#1E5BC6;
-    font-size: 16pt;
-  }
-
-  .titre_Red{
-    text-align: center;
-    font-weight: bold;
-    color: red;
-    font-size: 100pt;
-  }
-
-  .titre{
-    text-align: center;
-    font-weight: bold;
-    color: #1E5BC6;
-    font-size: 70pt;
-  }
-
-  .question-game{
-    text-align: center;
-    font-weight: 200;
-    color: #1E5BC6;
-    font-size: 60pt;
-  }
-
-  
-
-  .buzzer_red{
-    text-align: center;
-    line-height: 20rem;
-    background-color: red;
-    padding: 2rem; 
-    font-size: 5rem;
-    margin: 2rem; 
-    width: 60rem;
-    height: 20rem;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-  }
-  
-
-  .buzzer_yellow{
-    text-align: center;
-    line-height: 20rem;
-    background-color: #FFCB4F;
-    padding: 2rem; 
-    font-size: 5rem;
-    margin: 2rem; 
-    width: 60rem;
-    height: 20rem;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-  }
-  .buzzer_green{
-    text-align: center;
-    line-height: 20rem;
-    background-color: green;
-    padding: 2rem; 
-    font-size: 5rem;
-    margin: 2rem; 
-    width: 60rem;
-    height: 20rem;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-  }
-  .buzzer_blue{
-    text-align: center;
-    line-height: 20rem;
-    background-color: blue;
-    padding: 2rem; 
-    font-size: 5rem;
-    margin: 2rem; 
-    width: 60rem;
-    height: 20rem;
-    color: white;
-    border: none;
-    border-radius: 2rem;
-  }
-
-  .margin20{
-    margin-bottom: 20px;
-  }
-
-  .submit_btn{
-    margin-top: 5vh;
-    padding-left: 5vh;
-    padding-right: 5vh; 
-    padding-top: 2vh; 
-    padding-bottom: 2vh; 
-    font-weight: bold;
-    font-size: 22pt;
-    color: white;
-    background: #0970E6 0% 0% no-repeat padding-box;
-    opacity: 1;
-  }
-
-  .question{
-    border: 1px solid var(--unnamed-color-1e5bc6);
-    border: 1px solid #1E5BC6;
-    width: 500px;
-    padding: 10px;
-    margin: 3vh;
-    border-radius: 20px;
-  }
-
 
 }

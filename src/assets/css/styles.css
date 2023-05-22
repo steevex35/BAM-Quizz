@@ -3,25 +3,26 @@
   margin: 0;
 }
 
+
 @font-face {
-  font-family: gotham_bold;
-  src: url(../font/Gotham/Gotham_Bold.otf);
+  font-family: Open-Sans-regular;
+  src: url(../font/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Open-Sans-bold;
+  src: url(../font/OpenSans/OpenSans-Bold.ttf);
 }
 
 @font-face {
-  font-family: Open-Sans;
-  src: url(../font/OpenSans/OpenSans-Regular-new.ttf);
+  font-family: Open-Sans-medium;
+  src: url(../font/OpenSans/OpenSans-Medium.ttf);
 }
 
 @font-face {
-  font-family:'pixel-lcd';
-  src: url(../font/lcd/advanced_pixel_lcd-7.ttf) format('truetype');
+  font-family: Open-Sans-light;
+  src: url(../font/OpenSans/OpenSans-Light.ttf);
 }
 
-@font-face {
-  font-family:'citaro-normal';
-  src: url(../font/citaro/citaro_font.ttf) format('truetype');
-}
 
 .flex-grow{
   flex-grow: 1;
@@ -86,7 +87,92 @@ body {
 
 .count-down{
   color: #1E5BC6;
+  font-family: Open-Sans-bold;
   font-size: 80pt!important;
+}
+
+.submit_btn{
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Open-Sans-light;
+  font-size: 40px;
+  color: white;
+  background: #005BB0;
+  width: 350px;
+  border: #005BB0;
+}
+
+.question-game{
+  text-align: center;
+  font-family: Open-Sans-bold;
+  color: #005BB0;
+  font-size: 45pt;
+}
+
+.buzzer_red{
+  background-color: red;
+  text-align: center;
+  font-family: Open-Sans-bold;
+  border-radius: 50%;
+  width: 800px;
+  min-height: 800px;
+  font-size:45px;
+  padding: 10px;
+  margin: 2rem; 
+  color: white;
+  border: none;
+}
+
+
+.buzzer_yellow{
+  background-color: #FFCB4F;
+  text-align: center;
+  font-family: Open-Sans-bold;
+  border-radius: 50%;
+  width: 800px;
+  min-height: 800px;
+  font-size:45px;
+  padding: 10px;
+  font-size:45px;
+  padding: 10px;
+  margin: 2rem; 
+  color: white;
+  border: none;
+  
+}
+.buzzer_green{
+  background-color: green;
+  text-align: center;
+  font-family: Open-Sans-bold;
+  border-radius: 50%;
+  width: 800px;
+  min-height: 800px;
+  font-size:45px;
+  padding: 10px;
+  margin: 2rem; 
+  color: white;
+  border: none;
+}
+.buzzer_blue{
+  background-color: #005BB0;
+  text-align: center;
+  font-family: Open-Sans-bold;
+  border-radius: 50%;
+  width: 800px;
+  min-height: 800px;
+  font-size:45px;
+  padding: 10px;
+  margin: 2rem; 
+  color: white;
+  border: none;
+}
+.question{
+  border: 1px solid var(--unnamed-color-1e5bc6);
+  border: 1px solid #005BB0;
+  width: 500px;
+  padding: 10px;
+  margin: 3vh;
+  border-radius: 20px;
 }
 
 

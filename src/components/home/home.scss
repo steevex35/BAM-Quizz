@@ -2,18 +2,19 @@ section#home{
 
   height: 100vh;
   p{
-    color:#1E5BC6;
+    font-family:Open-Sans-bold;
+    color:#005BB0;
   }
 
   .submit_btn{
     padding: 2rem;
     margin: 2rem;
-    font-weight: bold;
-    font-size: 18pt;
+    font-family: Open-Sans-light;
+    font-size: 28pt;
     color: white;
-    background: #0970E6 0% 0% no-repeat padding-box;
+    background: #005BB0 0% 0% no-repeat padding-box;
     width: 350px;
-    border: #0970E6;
+    border: #005BB0;
   }
 
 

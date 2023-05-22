@@ -9,13 +9,13 @@
   "sex_m":"M",
   "sex_x":"X",
   "companie":"Entreprise",
-  "email":"E-mail",
+  "email":"Adresse e-mail",
   "reglement":"J'accepte le règlement du concours",
   "newsletter":" Je souhaite être tenu informé par e-mail des dernières actualités et offres de Carrefour Links.",
   "title_form":"Remplissez vos données et tentez de remporter le concours",
   "No":"Non, merci",
   "ok":"Valider",
-  "title_reglement":"Règlement du concours *",
+  "title_reglement":"REGLEMENT DE CONCOURS ‘GONDOLA DAY’",
   "title_reglemen_button":"Fermer",
   
   "chapter_1":"Article 1: Généralités",
@@ -101,6 +101,15 @@
   "question_base":"Buzzer pour continuer !",
 
   "getReady_1":"Vous êtes prêt ?",
-  "getReady_2":"Utilisez les buzzers pour répondre aux questions !"
+  "getReady_2":"Utilisez les buzzers pour répondre aux questions !",
+
+  "thanks_score_votre":"Votre score : ",
+  "play_again":"Participez une nouvelle fois et améliorez votre score.",
+
+  "ranking_1":"Jouez et tentez de gagner 2",
+  "ranking_2":" places pour un Dinner in the Sky",
+  "ranking_3":"ou 1 des 10 cartes cadeaux Carrefour de 25 EUR",
+  "ranking_4":"Top scores"
+
 
 }
