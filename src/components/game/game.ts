@@ -21,6 +21,7 @@ export class Game{
   private currentGamer: User=null;
 
   private peer = new Peer("receiver",{host:"localhost",port:9000});
+  // private peer = new Peer("receiver",{host:"192.168.0.1",port:9000});
 
   private countdown=0;
   private interval:any;
@@ -104,6 +105,7 @@ export class Game{
     console.log("current gamer is null")
     console.log("Stay here")
     }else{
+      this.i18n.setLocale(this.currentGamer.lng)
       //this.startTimer()
       console.log("current gamer is not null")
       console.log("Go first question")

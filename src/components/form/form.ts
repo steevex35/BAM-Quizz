@@ -22,6 +22,7 @@ export class Form{
   private userLng;
 
   private peer = new Peer("sender",{host:"localhost",port:9000});
+  //private peer = new Peer("sender",{host:"192.168.0.1",port:9000});
 
 
   constructor(private router:Router,private i18n:I18N,private dialogService:DialogService){

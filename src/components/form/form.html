@@ -21,9 +21,26 @@
           <tr>
             <td class="table_label"> <label for="sex" t="sex"></label></td>
             <td class="table_input_radio"> 
-              <input type="radio"  name="sex"  value.bind="1" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_f"></span>
-              <input type="radio"  name="sex"  value.bind="2" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_m"></span>
-              <input type="radio"  name="sex"  value.bind="3" checked.bind="sex"><span style="font-size: 35px!important;" t="sex_x"></span>
+              <div class="row">
+                <table>
+                  <tr>
+                    <td> <input type="radio"  name="sex"  value.bind="1" checked.bind="sex"></td>
+                    <td> <span style="font-size: 35px!important;" t="sex_f"></span></td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td > <input type="radio"  name="sex"  value.bind="2" checked.bind="sex"></td>
+                    <td> <span style="font-size: 35px!important;" t="sex_m"></span></td>
+                  </tr>
+                </table>
+                <table>
+                  <tr>
+                    <td>  <input type="radio"  name="sex"  value.bind="3" checked.bind="sex"></td>
+                    <td> <span style="font-size: 35px!important;" t="sex_x"></span></td>
+                  </tr>
+                </table>
+              </div>
             </td>
           </tr>
           <tr>
@@ -40,7 +57,7 @@
               <table>
                 <tr>
                   <td> <input type="checkbox" name="reglement" value.bind="1" checked.bind="reglement"></td>
-                  <td style="padding-left: 20px!important;"> <a click.delegate="clickReglement()"><u style="color: #005BB0;"><span t="reglement"></span></u></a></td>
+                  <td style="padding-left: 40px!important;"> <a click.delegate="clickReglement()"><u style="color: #005BB0;"><span t="reglement"></span></u></a></td>
                 </tr>
               </table>
             </td>
@@ -51,7 +68,7 @@
               <table>
                 <tr>
                   <td> <input type="checkbox" name="news" value.bind="1" checked.bind="newsletter"></td>
-                  <td style="padding-left: 20px!important;"> <span t="newsletter"></span></td></td>
+                  <td style="padding-left: 40px!important;"> <span t="newsletter"></span></td></td>
                 </tr>
               </table>
           </tr>

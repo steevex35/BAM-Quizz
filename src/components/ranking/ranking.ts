@@ -31,6 +31,7 @@ export class ranking{
 
   async fetchGamer(){
     const url="http://192.168.129.10/php-api/api/getUser.php"
+    //const url="http://192.168.0.1/php-api/api/getUser.php"
     const http = new HttpClient();
     await http.fetch(url,{
       method: "POST",
