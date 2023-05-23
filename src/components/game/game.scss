@@ -1,7 +1,7 @@
 section#game{
 
   height: 100vh;
-  $myheight: 20rem;
+  $myheight: 50rem;
   .parent{
     height: $myheight;
     p{
@@ -19,7 +19,7 @@ section#game{
     text-align: center;
     font-family: Open-Sans-bold;
     color: #005BB0;
-    font-size: 85px;
+    font-size: 100px;
   }
   .game_no_gamer_subtitle{
     text-align: center;

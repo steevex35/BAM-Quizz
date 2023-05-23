@@ -11,21 +11,34 @@
         <div class="center" style="margin-bottom: 5vh">
           <div class="center">
             <p class="thanks_title">
-              <span t="ranking_1"></span><br>
-              <span t="ranking_2"></span>
+
+              <!--- 
+                set lng =fr
+              1- Action " ranking_1" et "ranking_2" 5s
+              set lng =nl
+              2- Score NL 10s 
+              set lng=fr 
+              3- Scrore FR 10s
+              set lng=nl
+              4- Action " ranking_1" et "ranking_2"  5s
+              
+              -->
+              <span t="ranking_1" id="ranking_1" ref="ranking_1"></span><br>
+              <span t="ranking_2" id="ranking_2" ref="ranking_2"></span>
             </p>
             <p t="ranking_3"></p>
             <br>
-            <span class="thanks_title" t="ranking_4"></span> 
-            <div class="center" width="80%">
-            <table style="margin-left: auto;margin-right: auto;" class="subtitle">
-              <tr repeat.for="gamer of listOfGamers">
-                <td>${$index+1}.</td>
-                <td style="text-align: left!important;"> ${gamer.prenom} ${gamer.nom.charAt(0)}.</td>
-                <td style="padding-left: 150px!important;"> ${gamer.response} <span t="thanks_score"></span></td>
-              </tr>
-            </table>
-          </div>
+             
+            <div class="center" width="80%" id="score" ref="score">
+              <span class="thanks_title" t="ranking_4"></span>
+              <table style="margin-left: auto;margin-right: auto;" class="subtitle" >
+                <tr repeat.for="gamer of listOfGamers">
+                  <td>${$index+1}.</td>
+                  <td style="text-align: left!important;"> ${gamer.prenom} ${gamer.nom}</td>
+                  <td style="padding-left: 150px!important;"> ${gamer.response} <span t="thanks_score"></span></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       

@@ -17,18 +17,19 @@
             
           </div>
           <div if.bind="!game_done">
-          <div class="row center" style="margin-top:5vh;">
-            <input class="buzzer_blue" value.bind="blue" value="${currentGamer.question2Obj.answer1}">
-            <input class="buzzer_red" value.bind="red"value="${currentGamer.question2Obj.answer2}">
-            <input class="buzzer_yellow"value.bind="yellow"value="${currentGamer.question2Obj.answer3}">
-            <input class="buzzer_green" value.bind="green"value="${currentGamer.question2Obj.answer4}">
-          </div>
+            <div class="center row" style="margin-top:5vh;">
+              <p class="buzzer_blue">${currentGamer.question2Obj.answer1}</p>
+              <p class="buzzer_red">${currentGamer.question2Obj.answer2}</p>
+              <p class="buzzer_yellow">${currentGamer.question2Obj.answer3}</p>
+              <p class="buzzer_green">${currentGamer.question2Obj.answer4}</p>
+            </div>
         </div>
           <div class="center">
             <img class="won"  ref="reward_win" src="../../assets/img/win.png">
           </div>
           <div class="center">
             <img class="loose"  ref="reward_loose" src="../../assets/img/loose.png">
+            <p class="question-game" style="color: green;font-size:7rem!important;">${goodAnswer}</p>
           </div>
          
       </div>

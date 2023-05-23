@@ -40,11 +40,28 @@ export class Form{
 
   validate(){
     if(this.isEmpty(this.prenom) || this.isEmpty(this.nom) || this.isEmpty(this.sex) || this.isEmpty(this.entreprise) || this.isEmpty(this.reglement)){
-      this.errorMessage="Please complete all fields";
-      console.log(this.errorMessage)
+      if(this.isEmpty(this.reglement)){
+        //console.log(this.userLng)
+        if(window.localStorage.getItem('lng_sesison')==='fr'){
+          this.errorMessage="Veuillez accepter le règlement du concours pour continuer."
+        }else{
+          this.errorMessage="Accepteer het wedstrijdreglement om verder te gaan."
+        }
+      }
+      if(window.localStorage.getItem('lng_sesison')==='fr'){
+        this.errorMessage="Veuillez Remplir tous les champs, s'il vous plaît";
+      }else{
+        this.errorMessage="Vul alstublieft alle velden in"
+      }
+     
+      //console.log(this.errorMessage)
     }else if(this.validEmail(this.email)){
-      this.errorMessage="Please verify your email";
-      console.log(this.errorMessage)
+      if(window.localStorage.getItem('lng_sesison')==='fr'){
+        this.errorMessage="Veuillez vérifier votre adresse e-mail";
+      }else{
+        this.errorMessage="Verifieer uw emailadres alstublieft"
+      }
+      //console.log(this.errorMessage)
     }
     else{
       this.setUser();

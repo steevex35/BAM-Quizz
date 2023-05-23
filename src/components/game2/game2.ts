@@ -26,7 +26,7 @@ export class Game2{
   private counter: { min: number, sec: number }//new
   private clock;//new
 
-
+  private goodAnswer;//new
 
   constructor(private router:Router, private i18n:I18N){
     this.i18n.setLocale(window.localStorage.getItem('lng_sesison'));
@@ -104,6 +104,7 @@ export class Game2{
       this.reward_loose.classList.add("display_reward")
       this.currentGamer.question_answer3=value1;
       this.currentGamer.response=this.currentGamer.response + 0*this.counter.sec;
+      this.goodAnswer=value2
       await delay(2000);
       this.saveGamer();
     }
@@ -114,24 +115,24 @@ export class Game2{
       //this.tapeBuzzer()
       //console.log("Buzzer Bleu pushed")
       //console.log(this.blue)
-      this.checkValidQuestion(this.blue,this.currentGamer.question3Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question3Obj.answer1,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 2)){
       //console.log("Buzzer Rouge pushed")
       //console.log(this.red)
-      this.checkValidQuestion(this.red,this.currentGamer.question3Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question3Obj.answer2,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 3)){
       //this.stopCountdown()
       //this.countTapeBuzz=0
       //console.log("Buzzer Jaune pushed")
       //console.log(this.yellow)
-      this.checkValidQuestion(this.yellow,this.currentGamer.question3Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question3Obj.answer3,this.currentGamer.question3Obj.valid)
     }
     if((event.key == 4)){
       //console.log("Buzzer Vert pushed")
       //console.log(this.green)
-      this.checkValidQuestion(this.green,this.currentGamer.question3Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question3Obj.answer4,this.currentGamer.question3Obj.valid)
     }
      
   }

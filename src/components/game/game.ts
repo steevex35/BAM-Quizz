@@ -47,6 +47,8 @@ export class Game{
 
   private getReady=true;
   private getReadyCounter=10;
+
+  private goodAnswer;//new
   
 
 
@@ -288,7 +290,10 @@ export class Game{
       this.reward_loose.classList.add("display_reward")
       this.currentGamer.question_answer1=value1;
       this.currentGamer.response=0*this.counter.sec//new
+      //console.log(value2)
+      this.goodAnswer=value2
       await delay(2000);
+      
       this.saveGamer();
     }
   }
@@ -297,25 +302,24 @@ export class Game{
     if(event.key == 1){
       //this.tapeBuzzer()
       //console.log("Buzzer Bleu pushed")
-      //console.log(this.blue)
-      this.checkValidQuestion(this.blue,this.currentGamer.question1Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question1Obj.answer1,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 2)){
       //console.log("Buzzer Rouge pushed")
       //console.log(this.red)
-      this.checkValidQuestion(this.red,this.currentGamer.question1Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question1Obj.answer2,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 3)){
       //this.stopCountdown()
       //this.countTapeBuzz=0
       //console.log("Buzzer Jaune pushed")
       //console.log(this.yellow)
-      this.checkValidQuestion(this.yellow,this.currentGamer.question1Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question1Obj.answer3,this.currentGamer.question1Obj.valid)
     }
     if((event.key == 4)){
       //console.log("Buzzer Vert pushed")
       //console.log(this.green)
-      this.checkValidQuestion(this.green,this.currentGamer.question1Obj.valid)
+      this.checkValidQuestion(this.currentGamer.question1Obj.answer4,this.currentGamer.question1Obj.valid)
     }
      
   }

@@ -9,16 +9,18 @@
        
         <div class="center">
          
-          <div class="center parent" style="margin-top: 2vh">
-            <img src="../../assets/img/Dinner in the sky.jpg" class="img_gamer" width="486px">
+          <div class="center parent" style="margin-top: 1vh">
+            <img src="../../assets/img/Dinner in the sky.jpg" class="img_gamer" width="1086px">
          
             <p class.bind="isAnime1 ? 'show_message1' : ''">
-             <span class="game_no_gamer_title">Jouez et tentez de gagner 2 places  <br> pour un Dinner in the Sky  <br><br>
+             <span class="game_no_gamer_title">Jouez et tentez de gagner 2 places  <br> pour un Dinner in the Sky  <br>
             </span>
+            <br>
              <span class="game_no_gamer_subtitle">ou 1 des 10 cartes cadeaux Carrefour de 25 EUR</span>
             </p>
             <p class.bind="isAnime2 ? 'show_message1' : ''">
-              <span  class="game_no_gamer_title">Speel mee en maak kans op 2 tickets voor Dinner in the Sky <br></span>
+              <span  class="game_no_gamer_title">Speel mee en maak kans op 2 tickets <br> voor Dinner in the Sky <br></span>
+              <br>
               <span  class="game_no_gamer_subtitle">of 1 van de 10 Carrefour cadeaukaarten van 25 EUR</span>
             </p>
         </div>
@@ -47,11 +49,11 @@
               
             </div>
             <div if.bind="!game_done">
-              <div class="center" style="margin-top:5vh;">
-                <input class="buzzer_blue" value.bind="blue"  value="${currentGamer.question1Obj.answer1}">
-                <input class="buzzer_red" value.bind="red" value="${currentGamer.question1Obj.answer2}">
-                <input class="buzzer_yellow"value.bind="yellow" value="${currentGamer.question1Obj.answer3}">
-                <input class="buzzer_green" value.bind="green" value="${currentGamer.question1Obj.answer4}">
+              <div class="center row" style="margin-top:5vh;">
+                <p class="buzzer_blue">${currentGamer.question1Obj.answer1}</p>
+                <p class="buzzer_red">${currentGamer.question1Obj.answer2}</p>
+                <p class="buzzer_yellow">${currentGamer.question1Obj.answer3}</p>
+                <p class="buzzer_green">${currentGamer.question1Obj.answer4}</p>
               </div>
             </div>
         </div>
@@ -60,6 +62,7 @@
           </div>
           <div class="center">
             <img class="loose"  ref="reward_loose" src="../../assets/img/loose.png">
+            <p class="question-game" style="color: green;font-size:7rem!important;">${goodAnswer}</p>
           </div>
       </div>
     </div>
